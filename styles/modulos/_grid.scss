@@ -89,6 +89,78 @@
     .col-wide{
         grid-column: 1 / -1;
     }
+    .img-1{
+        grid-row: span 2;
+        align-self: end;
+    }
+    .img-2{
+        align-self: end;
+    }
+    /* inicio stylos */
+    p{
+        font-size: $content-font-size;
+        font-weight: $content-font-height;
+        letter-spacing: -0.005em;
+        color: $content-font-cor;
+    }
+    .informacoes{
+        p + p{
+            margin-top: 30px;
+        }
+    }
+    /* titulo */
+    .titulo{
+        color: $content-font-titulo-cor;
+        h1{
+            font-size: $content-font-titulo-size;
+            line-height: 1;
+            font-weight: 700;
+        }
+        span{
+            font-size: $content-font-subtitulo-size;
+            font-style: italic;
+        }
+    }
+    /* caracteristicas */
+    .caracteristicas{
+        display: flex;
+        align-items: flex-start;
+        span{
+            display: block;
+            color: $content-font-titulo-cor;
+        }
+        > div{
+            width: 80px;
+            text-align: center;
+            background: $footer-background;
+            border-radius: 6px;
+            box-shadow: 5px 5px 15px 0px rgba(44, 44, 44, 0.324);
+            position: relative;
+        }
+        > div:first-child{
+            margin-right: 30px;
+        }
+        .numero{
+            font-size: 3em;
+            line-height: 1;
+            margin-top: 10px auto;
+        }
+        .rotulo{
+            background-color: white;
+            border-radius: 0 0 5px 5px;
+            padding: 5px 0;
+            position: relative;
+            top: 2px;
+        }
+    }
+    /* testos em destaque */
+    .destaque{
+        font-size: $content-destaques-size;
+        color: $content-destaques-color;
+        max-width: 16em;
+        
+    }
+    /*   fim stylos  */
 }
 /* fim das configuracoes da content */
 
@@ -102,7 +174,6 @@
     padding: 30px;
     /* distancia entre os itens sem a margim */
     gap: 30px;
-
 }
 /* fim das configuracoes da anuncios */
 

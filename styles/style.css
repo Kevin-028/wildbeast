@@ -1,42 +1,177 @@
+/* Variaveis referente ao HEADER and FOOTER */
+/* Variaveis refetrente ao fundo das navs */
+body, p, h1, ul, li, blockquote {
+  margin: 0;
+  padding: 0;
+}
+
 body {
-  background: #aaa;
+  font-family: "Vollkorn", Georfia, serif;
 }
 
-/* @extend usando quando nao a variacaoes no css para nao gerar codigo repetitivo*/
-/* @mixin seria uma funcao para css, onde eu posso passar parametros no seu uso */
-.botao {
-  background-color: palevioletred;
-  border: none;
-  margin: 5px;
-  padding: 15px;
-  font-size: 1.5em;
+/* tirando a bolinha dos itens de lista */
+li {
+  list-style: none;
 }
 
-.banner {
-  background: yellow;
-  padding: 3em;
-  margin-bottom: 25px;
-}
-
-.banner__btn {
-  background-color: #dfd80d;
-  border: none;
-  margin: 5px;
-  padding: 15px;
-  font-size: 2em;
-  color: #ddda43;
-}
-
-.banner__btn--danger {
-  background-color: #fff;
-  border: none;
-  margin: 5px;
-  padding: 15px;
-  font-size: 5em;
-  background-color: red;
+a {
+  text-decoration: none;
 }
 
 img {
-  max-width: 100px;
+  display: block;
+  max-width: 100%;
+  border-radius: 10px;
 }
+
+/* configurando todo o sistema de grid do site */
+.estrutura {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: minmax(160px, 1fr) 3fr 300px;
+      grid-template-columns: minmax(160px, 1fr) 3fr 300px;
+      grid-template-areas: "header header header" "sidnev content anuncios" "footer footer footer";
+}
+
+/*configuracoes do menu */
+.header {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: header;
+  /* craiando um gradiente no menu */
+  background: linear-gradient(135deg, #8844ee, #B07DFB);
+  padding: 30px;
+  /* criando o Grid interno do menu */
+  display: -ms-grid;
+  display: grid;
+  /* definindo a quantidade de colunas do meu menu e tamanho */
+  -ms-grid-columns: 1fr auto;
+      grid-template-columns: 1fr auto;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  /*  fim do Grid interno do menu */
+}
+
+.header .logo {
+  max-width: 200px;
+}
+
+.header nav {
+  /* so ira adicionar a margin quando tiver um li apos o outro */
+}
+
+.header nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.header nav a {
+  display: block;
+  padding: 10px;
+  color: white;
+  font-size: 1.125em;
+  background: #8844ee58;
+  border-radius: 5px;
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
+}
+
+.header nav a:hover {
+  background: #8844ee8e;
+}
+
+.header nav li + li {
+  margin-left: 30px;
+}
+
+/* fim das configuracoes menu */
+/* inicio das configuracoes da sidnav */
+.sidenav {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: sidnev;
+  background: #e4d5fa25;
+  padding: 30px;
+}
+
+.sidenav ul li a {
+  display: block;
+  min-width: 60px;
+  max-width: 100px;
+  margin: 0 auto 30px auto;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  -webkit-box-shadow: 5px 5px 15px 0px rgba(44, 44, 44, 0.324);
+          box-shadow: 5px 5px 15px 0px rgba(44, 44, 44, 0.324);
+  -webkit-transition: .1s ease-out;
+  transition: .1s ease-out;
+}
+
+.sidenav ul li a:hover {
+  background-color: #B07DFB;
+}
+
+/* fim das configuracoes da sidnav */
+/* Inicio das configuracoes da content */
+.content {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: content;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 30px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  gap: 30;
+  /* define que o item no grid vai ser com todas as colunas */
+}
+
+.content .col-wide {
+  grid-column: 1 / -1;
+}
+
+/* fim das configuracoes da content */
+/* Inicio das configuracoes da anuncios */
+.anuncios {
+  -ms-grid-row: 2;
+  -ms-grid-column: 3;
+  grid-area: anuncios;
+  background: #e4d5fa25;
+  display: -ms-grid;
+  display: grid;
+  -ms-flex-line-pack: start;
+      align-content: start;
+  padding: 30px;
+  /* distancia entre os itens sem a margim */
+  gap: 30px;
+}
+
+/* fim das configuracoes da anuncios */
+/* Inicio das configuracoes da footer */
+.footer {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: footer;
+  background: linear-gradient(135deg, #8844ee, #B07DFB);
+}
+
+.footer p {
+  font-size: 1.125em;
+  color: white;
+  text-align: center;
+  padding: 30px;
+}
+
+/* fim das configuracoes da footer */
+/* @extend usando quando nao a variacaoes no css para nao gerar codigo repetitivo*/
+/* @mixin seria uma funcao para css, onde eu posso passar parametros no seu uso */
 /*# sourceMappingURL=style.css.map */

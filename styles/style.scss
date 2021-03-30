@@ -1,42 +1,6 @@
 @import "modulos/variaveis.scss";
 @import "modulos/html.scss";
-
-
-
+@import "modulos/grid.scss";
 
 /* @extend usando quando nao a variacaoes no css para nao gerar codigo repetitivo*/
 /* @mixin seria uma funcao para css, onde eu posso passar parametros no seu uso */
-@mixin btn($cor_fundo, $tamanho_font) {
-    background-color:  $cor_fundo;
-    border: none;
-    margin: 5px;
-    padding: 15px;
-    font-size: $tamanho_font;
-}
-.botao{
-    background-color: palevioletred;
-    border: none;
-    margin: 5px;
-    padding: 15px;
-    font-size: 1.5em;    
-}
-
-.banner{
-
-    background: yellow;
-    padding: 3em;
-    margin-bottom: 25px;
-    &__btn{
-        @include btn($cor_botao, $tamanho_da_font);
-        color: $cor;
-        &--danger{
-            @include btn( #fff, 5em);
-            background-color: red;
-        }
-    }
-}
-img{
-    max-width: 100px;
-}
-
-

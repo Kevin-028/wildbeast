@@ -1,0 +1,13 @@
+{
+    "name": "first-repo-sass",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Erro: no test especified\" && exit 1",
+        "css": "node-sass src/sass/ -o dist/css -w"
+    },
+    "dependencies": {
+        "node-sass": "^5.0.0"
+    }
+}

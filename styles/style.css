@@ -1,0 +1,42 @@
+body {
+  background: #aaa;
+}
+
+/* @extend usando quando nao a variacaoes no css para nao gerar codigo repetitivo*/
+/* @mixin seria uma funcao para css, onde eu posso passar parametros no seu uso */
+.botao {
+  background-color: palevioletred;
+  border: none;
+  margin: 5px;
+  padding: 15px;
+  font-size: 1.5em;
+}
+
+.banner {
+  background: yellow;
+  padding: 3em;
+  margin-bottom: 25px;
+}
+
+.banner__btn {
+  background-color: #dfd80d;
+  border: none;
+  margin: 5px;
+  padding: 15px;
+  font-size: 2em;
+  color: #ddda43;
+}
+
+.banner__btn--danger {
+  background-color: #fff;
+  border: none;
+  margin: 5px;
+  padding: 15px;
+  font-size: 5em;
+  background-color: red;
+}
+
+img {
+  max-width: 100px;
+}
+/*# sourceMappingURL=style.css.map */

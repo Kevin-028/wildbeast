@@ -1,3 +1,21 @@
-body{  
-    background: #aaa;
+body, p,h1,ul,li,blockquote{
+    margin: 0;
+    padding: 0;
+    
+}
+body{
+    font-family: "Vollkorn", Georfia, serif;
+}
+/* tirando a bolinha dos itens de lista */
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+
+img{
+    display: block;
+    max-width: 100%;
+    border-radius: 10px;
 }

@@ -1,5 +1,6 @@
 /* Variaveis referente ao HEADER and FOOTER */
 /* Variaveis refetrente ao fundo das navs */
+/* formatacao content */
 body, p, h1, ul, li, blockquote {
   margin: 0;
   padding: 0;
@@ -132,10 +133,102 @@ img {
       grid-template-columns: 1fr 1fr;
   gap: 30;
   /* define que o item no grid vai ser com todas as colunas */
+  /* inicio stylos */
+  /* titulo */
+  /* caracteristicas */
+  /* testos em destaque */
+  /*   fim stylos  */
 }
 
 .content .col-wide {
   grid-column: 1 / -1;
+}
+
+.content .img-1 {
+  grid-row: span 2;
+  -ms-flex-item-align: end;
+      -ms-grid-row-align: end;
+      align-self: end;
+}
+
+.content .img-2 {
+  -ms-flex-item-align: end;
+      -ms-grid-row-align: end;
+      align-self: end;
+}
+
+.content p {
+  font-size: 1.2em;
+  font-weight: 1.6;
+  letter-spacing: -0.005em;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.content .informacoes p + p {
+  margin-top: 30px;
+}
+
+.content .titulo {
+  color: #B07DFB;
+}
+
+.content .titulo h1 {
+  font-size: 3.75em;
+  line-height: 1;
+  font-weight: 700;
+}
+
+.content .titulo span {
+  font-size: 0.875em;
+  font-style: italic;
+}
+
+.content .caracteristicas {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.content .caracteristicas span {
+  display: block;
+  color: #B07DFB;
+}
+
+.content .caracteristicas > div {
+  width: 80px;
+  text-align: center;
+  background: linear-gradient(135deg, #8844ee, #B07DFB);
+  border-radius: 6px;
+  -webkit-box-shadow: 5px 5px 15px 0px rgba(44, 44, 44, 0.324);
+          box-shadow: 5px 5px 15px 0px rgba(44, 44, 44, 0.324);
+  position: relative;
+}
+
+.content .caracteristicas > div:first-child {
+  margin-right: 30px;
+}
+
+.content .caracteristicas .numero {
+  font-size: 3em;
+  line-height: 1;
+  margin-top: 10px auto;
+}
+
+.content .caracteristicas .rotulo {
+  background-color: white;
+  border-radius: 0 0 5px 5px;
+  padding: 5px 0;
+  position: relative;
+  top: 2px;
+}
+
+.content .destaque {
+  font-size: 0.875em;
+  color: #B07DFB;
+  max-width: 16em;
 }
 
 /* fim das configuracoes da content */

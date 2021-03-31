@@ -131,7 +131,7 @@ img {
   display: grid;
   -ms-grid-columns: 1fr 1fr;
       grid-template-columns: 1fr 1fr;
-  gap: 30;
+  gap: 30px;
   /* define que o item no grid vai ser com todas as colunas */
   /* inicio stylos */
   /* titulo */
@@ -142,6 +142,10 @@ img {
 
 .content .col-wide {
   grid-column: 1 / -1;
+}
+
+.content img {
+  width: 100%;
 }
 
 .content .img-1 {
@@ -223,6 +227,36 @@ img {
   padding: 5px 0;
   position: relative;
   top: 2px;
+}
+
+.content .citacao, .content .atributos {
+  padding: 30px;
+  border-radius: 5px;
+  -webkit-box-shadow: 5px 5px 15px 0px rgba(44, 44, 44, 0.15);
+          box-shadow: 5px 5px 15px 0px rgba(44, 44, 44, 0.15);
+  background: linear-gradient(135deg, #8844ee, #B07DFB);
+  -ms-flex-item-align: start;
+      -ms-grid-row-align: start;
+      align-self: start;
+}
+
+.content .citacao p {
+  font-size: 1.3em;
+  font-style: italic;
+  color: white;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.content .atributos li {
+  color: white;
+  font-family: Courier, monospace;
+  font-size: 1em;
+  padding: 15px;
+}
+
+.content .atributos li + li {
+  border-top: 2px solid #B07DFB;
 }
 
 .content .destaque {

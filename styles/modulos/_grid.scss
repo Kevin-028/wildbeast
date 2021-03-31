@@ -84,10 +84,14 @@
     padding: 30px;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 30;
+    gap: 30px;
+
     /* define que o item no grid vai ser com todas as colunas */
     .col-wide{
         grid-column: 1 / -1;
+    }
+    img{
+        width: 100%;
     }
     .img-1{
         grid-row: span 2;
@@ -95,6 +99,7 @@
     }
     .img-2{
         align-self: end;
+
     }
     /* inicio stylos */
     p{
@@ -153,6 +158,32 @@
             top: 2px;
         }
     }
+    .citacao,.atributos{
+        padding: 30px;
+        border-radius: 5px;
+        box-shadow: 5px 5px 15px 0px rgba(44, 44, 44, 0.15);
+        background: $footer-background;
+        align-self: start;
+    }
+    .citacao p{
+        font-size: 1.3em;
+        font-style: italic;
+        color: white;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+    .atributos{
+        li{
+            color: white;
+            font-family: Courier, monospace;
+            font-size: 1em;
+            padding: 15px;
+        }
+        li + li{
+            border-top: 2px solid #B07DFB;
+        }
+    }
+
     /* testos em destaque */
     .destaque{
         font-size: $content-destaques-size;

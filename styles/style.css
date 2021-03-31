@@ -50,9 +50,6 @@ img {
   /* definindo a quantidade de colunas do meu menu e tamanho */
   -ms-grid-columns: 1fr auto;
       grid-template-columns: 1fr auto;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   /*  fim do Grid interno do menu */
 }
 
@@ -280,6 +277,8 @@ img {
   padding: 30px;
   /* distancia entre os itens sem a margim */
   gap: 30px;
+  -ms-grid-columns: (minmax(150px, 1fr))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
 }
 
 /* fim das configuracoes da anuncios */
@@ -372,6 +371,24 @@ img {
   }
   .sidenav ul li a {
     margin: 30px 30px 30px 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .content {
+    -ms-grid-columns: auto;
+        grid-template-columns: auto;
+    justify-items: center;
+  }
+  .content img {
+    width: 100%;
+  }
+  .header {
+    justify-items: center;
+    gap: 10px;
+  }
+  .header img {
+    width: 250px;
   }
 }
 

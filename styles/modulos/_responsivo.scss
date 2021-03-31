@@ -1,0 +1,10 @@
+@media (max-width: 1200){
+    .estrutura{
+        grid-template-area:
+            "header header"
+            "sidenav content"
+            "sidnav anuncios"
+            "footer footer"
+        ;
+    }
+}

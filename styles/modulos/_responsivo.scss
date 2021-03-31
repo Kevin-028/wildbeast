@@ -23,9 +23,7 @@
     /* mudando o layout do Header para ficar responsivo */
     .header{
         grid-template-columns: auto; 
-        .logo{
-
-        }
+        align-items: center;
         nav{
             a{
                 font-size: 1.2em;

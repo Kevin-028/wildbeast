@@ -75,7 +75,7 @@ img {
 .header nav a {
   display: block;
   padding: 10px;
-  color: white;
+  color: #000;
   font-size: 1.125em;
   background: #8844ee58;
   border-radius: 5px;
@@ -300,6 +300,23 @@ img {
 }
 
 /* fim das configuracoes da footer */
+@-webkit-keyframes seta {
+  from {
+    right: 30px;
+  }
+  to {
+    right: 20px;
+  }
+}
+@keyframes seta {
+  from {
+    right: 30px;
+  }
+  to {
+    right: 20px;
+  }
+}
+
 @media (max-width: 1200px) {
   /* mudando o layout do conteudo para ficar responsivo */
   .estrutura {
@@ -316,6 +333,9 @@ img {
   .header {
     -ms-grid-columns: auto;
         grid-template-columns: auto;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   .header nav a {
     font-size: 1.2em;
@@ -337,6 +357,8 @@ img {
     top: 5px;
     right: 30px;
     color: rgba(0, 0, 0, 0.3);
+    -webkit-animation: seta .5s ease-in 0s infinite alternate;
+            animation: seta .5s ease-in 0s infinite alternate;
   }
   .sidenav ul {
     display: -webkit-box;

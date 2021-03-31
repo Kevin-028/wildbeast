@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* Variaveis referente ao HEADER and FOOTER */
 /* Variaveis refetrente ao fundo das navs */
 /* formatacao content */
@@ -299,6 +300,59 @@ img {
 }
 
 /* fim das configuracoes da footer */
+@media (max-width: 1200px) {
+  /* mudando o layout do conteudo para ficar responsivo */
+  .estrutura {
+        grid-template-areas: "header header header" "sidnev content content" "sidnev anuncios anuncios" "footer footer footer";
+  }
+}
+
+@media (max-width: 760px) {
+  /* mudando o layout do conteudo para ficar responsivo */
+  .estrutura {
+        grid-template-areas: "header header header" "sidnev sidnev sidnev" "content content content" "anuncios anuncios anuncios" "footer footer footer";
+  }
+  /* mudando o layout do Header para ficar responsivo */
+  .header {
+    -ms-grid-columns: auto;
+        grid-template-columns: auto;
+  }
+  .header nav a {
+    font-size: 1.2em;
+  }
+  .header nav li + li {
+    margin-left: 10px;
+  }
+  .sidenav {
+    /* overflow serve para nao criar uma quebra do layout nesse caso ira criar uma barra de rolagem especifica*/
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+    position: relative;
+    padding: 0 30px;
+  }
+  .sidenav:after {
+    content: "→";
+    position: absolute;
+    top: 5px;
+    right: 30px;
+    color: rgba(0, 0, 0, 0.3);
+  }
+  .sidenav ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .sidenav ul li {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 60px;
+            flex: 1 0 60px;
+  }
+  .sidenav ul li a {
+    margin: 30px 30px 30px 0;
+  }
+}
+
 /* @extend usando quando nao a variacaoes no css para nao gerar codigo repetitivo*/
 /* @mixin seria uma funcao para css, onde eu posso passar parametros no seu uso */
 /*# sourceMappingURL=style.css.map */

@@ -1,0 +1,63 @@
+@media (max-width: 1200px){
+    /* mudando o layout do conteudo para ficar responsivo */
+    .estrutura{
+        grid-template-areas: 
+            "header header header"
+            "sidnev content content"
+            "sidnev anuncios anuncios"
+            "footer footer footer"
+        ;
+    };
+};
+@media (max-width: 760px){
+    /* mudando o layout do conteudo para ficar responsivo */
+    .estrutura{
+        grid-template-areas:
+            "header header header"
+            "sidnev sidnev sidnev"
+            "content content content"
+            "anuncios anuncios anuncios"
+            "footer footer footer"
+            ;
+    }
+    /* mudando o layout do Header para ficar responsivo */
+    .header{
+        grid-template-columns: auto; 
+        align-items: center;
+        nav{
+            a{
+                font-size: 1.2em;
+            }
+            li + li{
+                margin-left: 10px;
+            }
+        }
+    };
+    .sidenav{
+        /* overflow serve para nao criar uma quebra do layout nesse caso ira criar uma barra de rolagem especifica*/
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        -ms-overflow-style: -ms-autohiding-scrollbar;
+        position: relative;
+        &:after{
+            content: "→";
+            position: absolute;
+            top: 5px;
+            right: 30px;
+            color: rgba(0, 0, 0, 0.3);
+            animation: seta .5s ease-in 0s infinite alternate;
+        }
+
+        ul{
+            display: flex;
+            li{
+                flex: 1 0 60px;
+                a{
+                    margin: 30px 30px 30px 0;
+                }
+            }
+        }
+        padding: 0 30px;
+
+    }
+};

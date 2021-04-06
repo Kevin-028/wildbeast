@@ -22,15 +22,26 @@
     }
     /* mudando o layout do Header para ficar responsivo */
     .header{
-        grid-template-columns: auto; 
+        grid-template-columns: 3fr 1fr;
         align-items: center;
         nav{
             a{
                 font-size: 1.2em;
             }
-            li + li{
-                margin-left: 10px;
+            li:nth-child(1){
+                display: none;
             }
+            li:nth-child(2){
+                display: none;
+            }
+            li:nth-child(3){
+                display: none;
+            }
+            li:nth-child(4){
+                display: block;
+                transition: all 1s linear;
+            }
+            
         }
     };
     .sidenav{
@@ -70,11 +81,24 @@
         }
     }
     .header{
+        grid-template-columns: 2fr 1fr;
         justify-items: center;
-        gap: 10px;
+        gap: 0px;
         img{
             width: 250px;
         }
+        nav{
+            li:nth-child(1){
+                display: none;
+            }
+            li:nth-child(2){
+                display: none;
+            }
+            li:nth-child(3){
+                display: none;
+            }
+        }
+
     }
 
 }

@@ -26,8 +26,35 @@
                     <li><a href="#">Sobre</a></li>
                     <li><a href="#">animais</a></li>
                     <li><a href="#">contato</a></li>
+                    <li>
+                        <a href="#" class="menu-open">
+                            <input type="checkbox" id="hamburger" style="display: none;"/>
+                            <label for="hamburger">
+                                <div class="hamburger"></div>
+                            </label>
+                        </a>
+                    </li>
                 </ul>
+
             </nav>
+            <div>
+                <div class="menu-overlay"></div>
+    
+                <div class="side-menu-wrapper">
+                <a href="#" class="menu-close">
+                    <input type="checkbox" id="hamburger1" style="display: none;"/>
+                    <label for="hamburger1">
+                        <div class="hamburger"></div>
+                    </label>
+                </a>
+                    <ul>
+                        <li><a href="#content" rel="nofollow">Sobre</a></li>
+                        <li><a href="#" rel="nofollow">Animais</a></li>
+                        <li><a href="#" rel="nofollow">Contato</a></li>
+                        <li><a href="#" rel="nofollow">outros</a></li>
+                    </ul>
+                </div>
+            </div>
         </header>
         <nav class="sidenav">
             <ul>
@@ -38,9 +65,10 @@
                 <li><a href="#"><img src="img/icones/ovelha.svg" alt="Cervo"></a></li>
                 <li><a href="#"><img src="img/icones/abelha.svg" alt="Cervo"></a></li>
             </ul>
+
         </nav>
         <!-- a Tag MAIN no HTML representa que esse vai ser o conteudo principal -->
-        <main class="content">
+        <main class="content" id="content">
             <div class="titulo">
                 <h1>Lobo Cinza</h1>
                 <span>da familia canis lupus</span>
@@ -140,7 +168,8 @@
             new window.VLibras.Widget('https://vlibras.gov.br/app');
         </script>
     </section>
-
+    <script src="js/jquery.js"></script>
+    <script src="js/java.js"></script>
 </body>
 
 </html>

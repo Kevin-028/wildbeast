@@ -2,12 +2,9 @@
 /* Variaveis referente ao HEADER and FOOTER */
 /* Variaveis refetrente ao fundo das navs */
 /* formatacao content */
-body, p, h1, ul, li, blockquote {
-  margin: 0;
+* {
   padding: 0;
-}
-
-body {
+  margin: 0;
   font-family: "Vollkorn", Georfia, serif;
 }
 
@@ -72,7 +69,7 @@ img {
 .header nav a {
   display: block;
   padding: 10px;
-  color: #000;
+  color: white;
   font-size: 1.125em;
   background: #8844ee58;
   border-radius: 5px;
@@ -86,6 +83,12 @@ img {
 
 .header nav li + li {
   margin-left: 30px;
+}
+
+.header nav li:nth-child(4) {
+  display: none;
+  -webkit-transition: all 1s linear;
+  transition: all 1s linear;
 }
 
 /* fim das configuracoes menu */
@@ -299,6 +302,123 @@ img {
 }
 
 /* fim das configuracoes da footer */
+.side-menu-wrapper {
+  /* style menu wrapper */
+  background: rgba(116, 24, 221, 0.942);
+  padding: 40px 0 0 40px;
+  position: fixed;
+  /* Fixed position */
+  top: 0;
+  right: 0;
+  /* Sidebar initial position. "right" for right positioned menu */
+  height: 100%;
+  z-index: 2;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  /* CSS transition speed */
+  width: 250px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.side-menu-wrapper > ul {
+  /* css ul list style */
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  overflow-y: auto;
+  /* enable scroll for menu items */
+  height: 95%;
+}
+
+.side-menu-wrapper > ul > li > a {
+  /* links */
+  display: block;
+  border-bottom: 1px solid white;
+  padding: 6px 4px 6px 4px;
+  color: #000000;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  text-decoration: none;
+}
+
+.side-menu-wrapper > a.menu-close {
+  /* close button */
+  padding: 8px 0 4px 23px;
+  color: black;
+  display: block;
+  margin: -30px 0 -10px -20px;
+  font-size: 35px;
+  text-decoration: none;
+}
+
+.menu-overlay {
+  /* overlay */
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  overflow-y: auto;
+  overflow-x: hidden;
+  text-align: center;
+  opacity: 0;
+  -webkit-transition: opacity 1s;
+  transition: opacity 1s;
+}
+
+.hamburger {
+  width: 25px;
+  height: 25px;
+  position: relative;
+  -webkit-transition: all .3s linear;
+  transition: all .3s linear;
+}
+
+.hamburger::after {
+  content: "";
+  width: 70%;
+  height: 3px;
+  background-color: aliceblue;
+  border-radius: 20px;
+  position: absolute;
+  top: 25%;
+  left: 15%;
+  -webkit-transition: all .3s linear;
+  transition: all .3s linear;
+}
+
+.hamburger::before {
+  content: "";
+  width: 70%;
+  height: 3px;
+  border-radius: 20px;
+  position: absolute;
+  top: 65%;
+  left: 15%;
+  background-color: aliceblue;
+  -webkit-transition: all .3s linear;
+  transition: all .3s linear;
+}
+
+#hamburger:checked ~ label .hamburger::after, #hamburger1:checked ~ label .hamburger::after {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  top: 45%;
+}
+
+#hamburger:checked ~ label .hamburger::before, #hamburger1:checked ~ label .hamburger::before {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  top: 45%;
+}
+
+#hamburger:checked ~ label .hamburger, #hamburger1:checked ~ label .hamburger {
+  top: 45%;
+}
+
 @-webkit-keyframes seta {
   from {
     right: 30px;
@@ -307,6 +427,7 @@ img {
     right: 20px;
   }
 }
+
 @keyframes seta {
   from {
     right: 30px;
@@ -330,8 +451,8 @@ img {
   }
   /* mudando o layout do Header para ficar responsivo */
   .header {
-    -ms-grid-columns: auto;
-        grid-template-columns: auto;
+    -ms-grid-columns: 3fr 1fr;
+        grid-template-columns: 3fr 1fr;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -339,8 +460,19 @@ img {
   .header nav a {
     font-size: 1.2em;
   }
-  .header nav li + li {
-    margin-left: 10px;
+  .header nav li:nth-child(1) {
+    display: none;
+  }
+  .header nav li:nth-child(2) {
+    display: none;
+  }
+  .header nav li:nth-child(3) {
+    display: none;
+  }
+  .header nav li:nth-child(4) {
+    display: block;
+    -webkit-transition: all 1s linear;
+    transition: all 1s linear;
   }
   .sidenav {
     /* overflow serve para nao criar uma quebra do layout nesse caso ira criar uma barra de rolagem especifica*/
@@ -384,11 +516,22 @@ img {
     width: 100%;
   }
   .header {
+    -ms-grid-columns: 2fr 1fr;
+        grid-template-columns: 2fr 1fr;
     justify-items: center;
-    gap: 10px;
+    gap: 0px;
   }
   .header img {
     width: 250px;
+  }
+  .header nav li:nth-child(1) {
+    display: none;
+  }
+  .header nav li:nth-child(2) {
+    display: none;
+  }
+  .header nav li:nth-child(3) {
+    display: none;
   }
 }
 

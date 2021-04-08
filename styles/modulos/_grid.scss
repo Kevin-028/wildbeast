@@ -10,6 +10,9 @@
 }
 /*configuracoes do menu */
 .header{
+    z-index: 9999;
+    position: sticky; 
+    top:0;
     grid-area: header;
     /* craiando um gradiente no menu */
     background: $header-background;

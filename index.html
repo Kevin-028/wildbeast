@@ -16,18 +16,16 @@
 <body>
 
 
-
-    
     <div class="estrutura">
         <header class="header">
             <a href="#" class="logo"><img src="img/wildbeast.svg" alt="wildbeast"></a>
             <nav class="btn-menu">
                 <ul>
-                    <li><a href="#">Sobre</a></li>
-                    <li><a href="#">animais</a></li>
-                    <li><a href="#">contato</a></li>
+                    <li><a href="#content" rel="nofollow">Sobre</a></li>
+                    <li><a href="#anuncios" rel="nofollow">animais</a></li>
+                    <li><a href="#content" rel="nofollow">contato</a></li>
                     <li>
-                        <a href="#" class="menu-open">
+                        <a class="menu-open">
                             <input type="checkbox" id="hamburger" style="display: none;"/>
                             <label for="hamburger">
                                 <div class="hamburger"></div>
@@ -41,17 +39,17 @@
                 <div class="menu-overlay"></div>
     
                 <div class="side-menu-wrapper">
-                <a href="#" class="menu-close">
-                    <input type="checkbox" id="hamburger1" style="display: none;"/>
-                    <label for="hamburger1">
-                        <div class="hamburger"></div>
-                    </label>
-                </a>
+                    <a href="#" class="menu-close">
+                        <input type="checkbox" id="hamburger1" style="display: none;"/>
+                        <label for="hamburger1">
+                            <div class="hamburger"></div>
+                        </label>
+                    </a>
                     <ul>
-                        <li><a href="#content" rel="nofollow">Sobre</a></li>
-                        <li><a href="#" rel="nofollow">Animais</a></li>
-                        <li><a href="#" rel="nofollow">Contato</a></li>
-                        <li><a href="#" rel="nofollow">outros</a></li>
+                        <li><a href="#content" rel="nofollow" class="link-menu">Sobre</a></li>
+                        <li><a href="#anuncios" rel="nofollow"class="link-menu">Animais</a></li>
+                        <li><a href="#content" rel="nofollow" class="link-menu">Contato</a></li>
+                        <li><a href="#anuncios" rel="nofollow" class="link-menu">outros</a></li>
                     </ul>
                 </div>
             </div>
@@ -139,7 +137,7 @@
             <img src="img/wolf3.jpeg" alt="" class="col-wide">
 
         </main>
-        <aside class="anuncios">
+        <aside class="anuncios" id="anuncios">
             <div class="anuncio-item">
                 <img src="img/anuncio-1.jpeg" alt="">
             </div>

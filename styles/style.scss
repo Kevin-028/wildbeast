@@ -1,9 +1,9 @@
-@import "modulos/variaveis.scss";
-@import "modulos/html.scss";
-@import "modulos/grid.scss";
-@import "modulos/menu.scss";
-@import "modulos/animacao.scss";
-@import "modulos/responsivo.scss";
+@use "modulos/variaveis";
+@use "modulos/html";
+@use "modulos/grid";
+@use "modulos/menu";
+@use "modulos/animacao";
+@use "modulos/responsivo";
 
 /* @extend usando quando nao a variacaoes no css para nao gerar codigo repetitivo*/
 /* @mixin seria uma funcao para css, onde eu posso passar parametros no seu uso */
